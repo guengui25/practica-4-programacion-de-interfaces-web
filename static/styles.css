@@ -1,0 +1,55 @@
+body{
+  background-color: #87CEEB;
+}
+
+.WeatherIsland {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative; /* Para posicionar los emojis */
+  overflow: auto; /* Agregar desbordamiento */
+  max-width: 600px;
+  flex: auto;
+}
+
+.OptionSelect{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+  margin: 10px 0;
+}
+
+.Selected_options{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Error{
+  color: red;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Estilos de los emojis (añade más si es necesario) */
+.emoji-cloud {
+  position: absolute;
+  animation: moveCloud 30s linear infinite; /* Animación de movimiento */
+  font-size: 100px; /* Tamaño de las nubes */
+  pointer-events: none; /* Desactiva la selección de las nubes */
+  z-index: -1; /* Coloca las nubes en el fondo */
+}
+
+/* Keyframes para la animación de movimiento */
+@keyframes moveCloud {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
